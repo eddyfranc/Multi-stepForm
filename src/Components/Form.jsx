@@ -1,22 +1,22 @@
-import React, { useState } from 'react';
-import UserDetails from './UserDetails';
-import Contact from './Contact';
-import Skills from './Skills';
-import Confirmation from './Confirmation';
+import React, { useState } from "react";
+import UserDetails from "./UserDetails";
+import Contact from "./Contact";
+import Skills from "./Skills";
+import Confirmation from "./Confirmation";
 
 const Form = () => {
   const [step, setStep] = useState(1);
   const [formData, setFormData] = useState({
-    firstName: '',
-    lastName: '',
-    email: '',
-    phone: '',
-    skills: '',
+    firstName: "",
+    lastName: "",
+    email: "",
+    phone: "",
+    skills: "",
   });
   const [showModal, setShowModal] = useState(false);
 
-  const nextStep = () => setStep(prev => prev + 1);
-  const prevStep = () => setStep(prev => prev - 1);
+  const nextStep = () => setStep((prev) => prev + 1);
+  const prevStep = () => setStep((prev) => prev - 1);
 
   const handleChange = (input) => (e) => {
     setFormData({ ...formData, [input]: e.target.value });
@@ -32,11 +32,11 @@ const Form = () => {
     setShowModal(false);
     setStep(1);
     setFormData({
-      firstName: '',
-      lastName: '',
-      email: '',
-      phone: '',
-      skills: '',
+      firstName: "",
+      lastName: "",
+      email: "",
+      phone: "",
+      skills: "",
     });
   };
 
@@ -84,7 +84,9 @@ const Form = () => {
                 <div className="text-center">
                   <h3 className="text-2xl font-bold text-gray-900">Success!</h3>
                   <div className="mt-2 px-7 py-3">
-                    <p className="text-lg text-gray-500">Your details have been submitted successfully.</p>
+                    <p className="text-lg text-gray-500">
+                      Your details have been submitted successfully.
+                    </p>
                   </div>
                   <div className="items-center px-4 py-3">
                     <button
